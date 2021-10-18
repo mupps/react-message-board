@@ -16,12 +16,13 @@ const styles = `
   color: #000000;
   transition: border-color 0.2s;
   box-sizing: border-box;
+  font-family: "Lucida Console", "Courier New", monospace;
 `
 const Input = s.input`${styles}`
 
 const Textarea = s.textarea`${styles}`
 
-const Submission = ({ startText, onSubmit }) => {
+const PostForm = ({ startText, onSubmit }) => {
   // sets state for the name and post information
   const [name, setName] = useState('')
   const [text, setText] = useState(startText || '')
@@ -72,4 +73,4 @@ const Submission = ({ startText, onSubmit }) => {
   )
 }
 
-export default Submission
+export default PostForm

@@ -5,7 +5,7 @@ import s from 'styled-components'
 const Wrapper = s.div`
   display: flex;
   flex-direction: column;
-  width: 24px;
+  width: 12px;
   align-items: center;
   float: right;
 `
@@ -13,8 +13,9 @@ const Wrapper = s.div`
 const CounterText = s.p`
   display: flex;
   user-select: none;
-  font-size: 80%;
   font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
 `
 
 const Counter = () => {
@@ -22,9 +23,17 @@ const Counter = () => {
   return (
     <>
       <Wrapper>
-        <ArrowUp onClick={e => changeNumLikes(numLikes + 1)} />
+        <ArrowUp
+          color="royalblue"
+          size={15}
+          onClick={e => changeNumLikes(numLikes + 1)}
+        />
         <CounterText>{numLikes}</CounterText>
-        <ArrowDown onClick={e => changeNumLikes(numLikes - 1)} />
+        <ArrowDown
+          color="royalblue"
+          size={15}
+          onClick={e => changeNumLikes(numLikes - 1)}
+        />
       </Wrapper>
     </>
   )

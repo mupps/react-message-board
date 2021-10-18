@@ -1,6 +1,6 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState } from 'react'
 import s from 'styled-components'
-import Submission from './Submission'
+import PostForm from './PostForm'
 import Counter from './Counter'
 
 const ReplyButton = s.span`
@@ -11,13 +11,19 @@ const ReplyButton = s.span`
   cursor: pointer;
   margin-top: 0.4rem;
   user-select: none;
+  color: blue;
 
   svg {
     margin-right: 4px;
     opacity: 0.8;
     transform: scale(0.8);
   }
-  
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.8;
+  }
 `
 
 const Reply = s.div`
@@ -31,14 +37,16 @@ const Post = ({ info, d }) => {
   const [replies, setReplies] = useState([])
 
   const data = (
-    <Fragment>
+    <>
       <Counter />
       <b>
-        <p style={{ color: 'blue' }}>
+        <p style={{ color: 'blue', userSelect: 'none' }}>
           {info.name}
         </p>
       </b>
-      <p>{info.text}</p>
+      <p style={{ color: 'black', userSelect: 'none' }}>
+        {info.text}
+      </p>
       {d < 3 && (
         <>
             {replies.map(r => (
@@ -49,7 +57,7 @@ const Post = ({ info, d }) => {
           </ReplyButton>
           {isReplyActive && (
             <div>
-              <Submission
+              <PostForm
                 startText={`@${info.name} `}
                 onSubmit={reply => {
                   setIsReplyActive(false)
@@ -60,7 +68,7 @@ const Post = ({ info, d }) => {
           )}
         </>
       )}
-    </Fragment>
+    </>
   )
 
   if (d === 1) {
