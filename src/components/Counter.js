@@ -24,7 +24,7 @@ const Counter = () => {
 
   function decrementLikes(e) {
     if (numLikes > 0) {
-      changeNumLikes(numLikes-1)
+      changeNumLikes(numLikes - 1)
     }
   }
   return (
