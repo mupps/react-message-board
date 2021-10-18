@@ -20,7 +20,7 @@ const styles = `
 `
 const Input = s.input`${styles}`
 
-const Textarea = s.textarea`${styles}`
+const TextArea = s.textarea`${styles}`
 
 const PostForm = ({ startText, onSubmit }) => {
   const [name, setName] = useState('')
@@ -57,7 +57,7 @@ const PostForm = ({ startText, onSubmit }) => {
           onChange={e => setName(e.target.value)}
           placeholder="Name..."
         />
-        <Textarea
+        <TextArea
           value={text}
           onChange={e => setText(e.target.value)}
           placeholder="Write a new post..."

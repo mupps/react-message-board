@@ -45,7 +45,7 @@ const NewPostTitle = s.h3`
 
 const App = () => {
   const [post, setPost] = useState([])
-  const postBox = post.map((props, i) => <Post key={props.id} info={props} d={1} />)
+  const postBox = post.map((props, _) => <Post key={props.id} info={props} d={1} />)
   return (
     <>
       <Title />

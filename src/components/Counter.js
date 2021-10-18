@@ -16,6 +16,7 @@ const CounterText = s.p`
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 0;
+  align-content: center;
 `
 
 const Counter = () => {
