@@ -3,6 +3,12 @@ import s from 'styled-components'
 import PostForm from './PostForm'
 import Counter from './Counter'
 
+const Wrapper = s.div`
+  border-left: solid blue;
+  padding-left: 2%;
+  user-select: none;
+`
+
 const ReplyButton = s.span`
   display: flex;
   align-items: center;
@@ -39,14 +45,16 @@ const Post = ({ info, d }) => {
   const data = (
     <>
       <Counter />
-      <b>
-        <p style={{ color: 'blue', userSelect: 'none' }}>
-          {info.name}
+      <Wrapper>
+        <b>
+          <p style={{ color: 'blue' }}>
+            {info.name}
+          </p>
+        </b>
+        <p style={{ color: 'black' }}>
+          {info.text}
         </p>
-      </b>
-      <p style={{ color: 'black', userSelect: 'none' }}>
-        {info.text}
-      </p>
+      </Wrapper>
       {d < 3 && (
         <>
             {replies.map(r => (
@@ -74,9 +82,9 @@ const Post = ({ info, d }) => {
   if (d === 1) {
     return (
       <>
-        <div className="postBox">
+        <>
           {data}
-        </div>
+        </>
       </>
     )
   }

@@ -23,7 +23,6 @@ const Input = s.input`${styles}`
 const Textarea = s.textarea`${styles}`
 
 const PostForm = ({ startText, onSubmit }) => {
-  // sets state for the name and post information
   const [name, setName] = useState('')
   const [text, setText] = useState(startText || '')
   const [disabled, setDisabled] = useState(true)

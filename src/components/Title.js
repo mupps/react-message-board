@@ -1,7 +1,7 @@
 import React from 'react'
 import s from 'styled-components'
 
-const StyledH1 = s.h1`
+const StyledTitle = s.h1`
   text-align: center;
   padding-top:20px;
   padding-bottom:10px;
@@ -9,6 +9,6 @@ const StyledH1 = s.h1`
   color: blue;
 `
 
-const Title = () => (<StyledH1> CIS 197 HW 4 </StyledH1>)
+const Title = () => (<StyledTitle> React Comment App (CIS 197 HW 4) </StyledTitle>)
 
 export default Title
