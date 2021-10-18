@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { v4 as uuid } from 'uuid'
-import './App.css'
 import s from 'styled-components'
 import { Button } from 'react-bootstrap'
 
@@ -18,8 +17,9 @@ const styles = `
   transition: border-color 0.2s;
   box-sizing: border-box;
 `
-export const Input = s.input`${styles}`
-export const Textarea = s.textarea`${styles}`
+const Input = s.input`${styles}`
+
+const Textarea = s.textarea`${styles}`
 
 const Submission = ({ startText, onSubmit }) => {
   // sets state for the name and post information
@@ -52,14 +52,15 @@ const Submission = ({ startText, onSubmit }) => {
         setText('')
       }}
       >
-        <Input 
-          value={name} onChange={e => setName(e.target.value)}
-          placeholder='Name...'
+        <Input
+          value={name}
+          onChange={e => setName(e.target.value)}
+          placeholder="Name..."
         />
         <Textarea
           value={text}
           onChange={e => setText(e.target.value)}
-          placeholder='Write a new post...'
+          placeholder="Write a new post..."
         />
         <div style={{ textAlign: 'right' }}>
           <Button type="submit" value="Submit" disabled={disabled}>

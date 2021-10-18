@@ -2,3 +2,5 @@
 node_modules
 dist
 .eslintrc
+package-lock.json
+App.css

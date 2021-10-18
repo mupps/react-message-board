@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, Fragment } from 'react'
 import s from 'styled-components'
 import Submission from './Submission'
 import Counter from './Counter'
@@ -31,7 +31,7 @@ const Post = ({ info, d }) => {
   const [replies, setReplies] = useState([])
 
   const data = (
-    <React.Fragment>
+    <Fragment>
       <Counter />
       <b>
         <p style={{ color: 'blue' }}>
@@ -49,18 +49,18 @@ const Post = ({ info, d }) => {
           </ReplyButton>
           {isReplyActive && (
             <div>
-            <Submission
-              startText={`@${info.name} `}
-              onSubmit={reply => {
-                setIsReplyActive(false)
-                setReplies([...replies, reply])
-              }}
-            />
+              <Submission
+                startText={`@${info.name} `}
+                onSubmit={reply => {
+                  setIsReplyActive(false)
+                  setReplies([...replies, reply])
+                }}
+              />
             </div>
           )}
         </>
       )}
-    </React.Fragment>
+    </Fragment>
   )
 
   if (d === 1) {
