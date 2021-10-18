@@ -1,0 +1,40 @@
+{
+  "name": "react-message-board",
+  "version": "1.0.0",
+  "description": "message board with likes and dislikes, replies, all done in React",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mupps/react-message-board.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mupps/react-message-board/issues"
+  },
+  "homepage": "https://github.com/mupps/react-message-board#readme",
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "parcel-bundler": "^1.12.5",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.4",
+    "react-bootstrap-icons": "^1.5.0",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "styled-components": "^5.3.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4 || ^3 || ^2.3.0 || ^1.7.0"
+  }
+}
