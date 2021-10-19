@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import s from 'styled-components'
 import Post from './Post'
-import Title from './Title'
 import PostForm from './PostForm'
 
 const MainWindow = s.div`
@@ -43,12 +42,20 @@ const NewPostTitle = s.h3`
   color: black;
 `
 
+const StyledTitle = s.h1`
+  text-align: center;
+  padding-top:20px;
+  padding-bottom:10px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: blue;
+`
+
 const App = () => {
   const [post, setPost] = useState([])
   const postBox = post.map((props, _) => <Post key={props.id} info={props} d={1} />)
   return (
     <>
-      <Title />
+      <StyledTitle> React Comment App (CIS 197 HW 4) </StyledTitle>
       <MainWindow>
         <NewPostTitle>Add a New post!</NewPostTitle>
         <PostForm onSubmit={r => setPost([...post, r])} replyUser="" />
