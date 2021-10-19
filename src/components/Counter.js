@@ -21,12 +21,6 @@ const CounterText = s.p`
 
 const Counter = () => {
   const [numLikes, changeNumLikes] = useState(0)
-
-  function decrementLikes(e) {
-    if (numLikes > 0) {
-      changeNumLikes(numLikes - 1)
-    }
-  }
   return (
     <>
       <Wrapper>
@@ -39,7 +33,7 @@ const Counter = () => {
         <ArrowDown
           color="royalblue"
           size={15}
-          onClick={e => decrementLikes(e)}
+          onClick={e => changeNumLikes(numLikes - 1)}
         />
       </Wrapper>
     </>
